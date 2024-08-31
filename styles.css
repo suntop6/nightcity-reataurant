@@ -1,17 +1,16 @@
-/* Global Styles */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* لون داكن */
-    background-image: url('/img/pexels-lexi-lauwers-1431940-2921137.jpg'); /* إضافة خلفية */
-    background-size: cover; /* تغطية كاملة */
-    background-repeat: no-repeat; /* عدم تكرار الصورة */
+    background-image: url('img/pexels-lexi-lauwers-1431940-2921137.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
     color: #e0e0e0;
     overflow-x: hidden;
 }
 
-/* Header Styles */
+
 header {
     position: fixed;
     width: 100%;
@@ -24,11 +23,11 @@ header {
     align-items: center;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
-    transition: background 0.3s ease; /* تأثير تغيير الخلفية */
+    transition: background 0.3s ease; 
 }
 
 header:hover {
-    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(0, 0, 0, 1)); /* تأثير عند التمرير */
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(0, 0, 0, 1)); 
 }
 
 header h1 {
@@ -60,7 +59,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Main Content Styles */
 .intro {
     text-align: center;
     padding: 100px 20px;
@@ -88,7 +86,6 @@ nav ul li a:hover {
     text-shadow: 0 0 5px #c0c0c0;
 }
 
-/* Menu Styles */
 .menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -97,28 +94,27 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Dish Styles */
 .dish {
     background-color: rgba(26, 26, 26, 0.9);
     border-radius: 20px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    position: relative; /* لتسهيل إضافة التأثيرات */
+    position: relative; 
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dish:hover {
-    transform: scale(1.05); /* تأثير تكبير */
-    box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* ظل متألق عند التمرير */
+    transform: scale(1.05); 
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1); 
 }
 
 .dish img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
-    animation: slideIn 0.5s ease; /* تأثير انزلاق الصورة */
+    animation: slideIn 0.5s ease; 
 }
 
 @keyframes slideIn {
@@ -161,7 +157,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* تأثير الأشعة */
+
 .dish:before {
     content: '';
     position: absolute;
@@ -169,23 +165,22 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 10px; /* زوايا دائرية للأشعة */
-    background: rgba(0, 255, 204, 0.5); /* لون الأشعة الطبيعية */
-    z-index: 0; /* خلف النص */
-    opacity: 0; /* إخفاء في البداية */
-    transition: opacity 0.5s ease; /* تأثير الانتقال للأشعة */
+    border-radius: 10px; 
+    background: rgba(0, 255, 204, 0.5); 
+    z-index: 0; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
 }
 
 .dish.active:before {
-    opacity: 1; /* إظهار الأشعة */
+    opacity: 1;
 }
 
 .dish.active.purple:before {
-    background: rgba(128, 0, 128, 0.5); /* لون الأشعة البنفسجية */
-    transition: background 0.5s ease; /* تأثير الانتقال للون */
+    background: rgba(128, 0, 128, 0.5); 
+    transition: background 0.5s ease; 
 }
 
-/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -195,14 +190,12 @@ footer {
     box-shadow: 0 -4px 2px -2px #000;
 }
 
-/* حركات إضافية */
 @keyframes neonPulse {
     0% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
     50% { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
     100% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
 }
 
-/* تأثيرات نص النيون */
 h1, h2, h3, h4 {
-    animation: neonPulse 1.5s infinite alternate; /* تأثير نبض النيون */
+    animation: neonPulse 1.5s infinite alternate; 
 }
