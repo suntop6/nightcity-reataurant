@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* لون داكن */
+    background-image: url('/img/pexels-lexi-lauwers-1431940-2921137.jpg'); /* إضافة خلفية */
+    background-size: cover; /* تغطية كاملة */
+    background-repeat: no-repeat; /* عدم تكرار الصورة */
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.8), rgba(0, 0, 0, 0.8));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
+    transition: background 0.3s ease; /* تأثير تغيير الخلفية */
+}
+
+header:hover {
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(0, 0, 0, 1)); /* تأثير عند التمرير */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Main Content Styles */
+.intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ffcc;
+    margin-top: 80px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.intro h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ff007f;
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.intro p {
+    font-size: 1.5em;
+    color: #c0c0c0;
+    text-shadow: 0 0 5px #c0c0c0;
+}
+
+/* Menu Styles */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dish Styles */
+.dish {
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    position: relative; /* لتسهيل إضافة التأثيرات */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish:hover {
+    transform: scale(1.05); /* تأثير تكبير */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* ظل متألق عند التمرير */
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease; /* تأثير انزلاق الصورة */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.dish h4 {
+    font-size: 1.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.dish p {
+    color: #c0c0c0;
+}
+
+.price-box {
+    background-color: #ff007f;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #00ffcc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff007f;
+    color: #fff;
+}
+
+/* تأثير الأشعة */
+.dish:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px; /* زوايا دائرية للأشعة */
+    background: rgba(0, 255, 204, 0.5); /* لون الأشعة الطبيعية */
+    z-index: 0; /* خلف النص */
+    opacity: 0; /* إخفاء في البداية */
+    transition: opacity 0.5s ease; /* تأثير الانتقال للأشعة */
+}
+
+.dish.active:before {
+    opacity: 1; /* إظهار الأشعة */
+}
+
+.dish.active.purple:before {
+    background: rgba(128, 0, 128, 0.5); /* لون الأشعة البنفسجية */
+    transition: background 0.5s ease; /* تأثير الانتقال للون */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #777;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 2px -2px #000;
+}
+
+/* حركات إضافية */
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+    50% { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    100% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+}
+
+/* تأثيرات نص النيون */
+h1, h2, h3, h4 {
+    animation: neonPulse 1.5s infinite alternate; /* تأثير نبض النيون */
+}
