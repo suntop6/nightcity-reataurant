@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Restaurant - NightCity</title>
+    <title>Nightcity March - March</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-image: url('img/tjp8ioa1adm71.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            color: #e0e0e0;
-            overflow-x: hidden;
+            background-image: url('img/MainIMG-1920x1080-ef6bd1ad93ce95ba967e2347be8e74e1.avif'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #e0e0e0; 
         }
+
         .image-container {
             position: relative;
             overflow: hidden; 
             height: 200px; 
         }
+
         .dish-image {
             width: 100%; 
             height: 100%;
@@ -31,19 +29,112 @@
             left: 0;
             opacity: 0; 
         }
+
         .dish-image.active {
             opacity: 1; 
+        }
+
+        .dish {
+            position: relative; 
+            overflow: hidden; 
+            background-color: rgba(26, 26, 26, 0.9);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 0 30px rgba(0, 255, 255, 1); 
+        }
+
+        .dish:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px; 
+            background: rgba(0, 255, 204, 0.5); 
+            z-index: 0; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+        }
+
+        .dish.active:before {
+            opacity: 1; 
+        }
+
+        .dish.active.purple:before {
+            background: rgba(128, 0, 128, 0.5); 
+            transition: background 0.5s ease; 
+        }
+
+        .dish-info {
+            position: relative;
+            z-index: 1; 
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); 
+            border-radius: 10px;
+            transition: opacity 0.5s ease; 
+        }
+
+        .dish h4 {
+            font-size: 1.5em;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        .dish p {
+            color: #c0c0c0;
+        }
+
+        .price-box {
+            background-color: #ff007f;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            background-color: #00ffcc;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ff007f;
+            color: #fff;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>NightCity Restaurant</h1>
+        <h1>Nightcity March</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Our Shop</a></li>
-                <li><a href="#">Book a Restaurant</a></li>
+                <li><a href="shop.html">our shop</a></li>
+                <li><a href="restaurant.html">Book a Restaurant</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
@@ -51,88 +142,88 @@
 
     <main>
         <section class="intro">
-            <h2>World-Class Dining</h2>
-            <p>Explore our selection of traditional and cyberpunk-inspired dishes.</p>
+            <h2>Fashion Collection</h2>
+            <p>Explore our selection of stylish and trendy clothing.</p>
         </section>
 
         <section class="menu">
-            <h3>Traditional Dishes</h3>
+            <h3>Stray March </h3>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/images.jpg" alt="Spaghetti Carbonara" class="dish-image active">
-                    <img src="img/images (1).jpg" alt="Spaghetti Carbonara" class="dish-image">
+                    <img src="img/stray-game-t-shirts (1).jpg" alt="Casual T-Shirt" class="dish-image active">
+                    <img src="img/stray-game-t-shirts (4).jpg" alt="Casual T-Shirt" class="dish-image">
+                    <img src="img/stray-game-t-shirts (2).jpg" alt="Casual T-Shirt" class="dish-image">
+                    <img src="img/stray-game-t-shirts (3).jpg" alt="Casual T-Shirt" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Flash Foods</h4>
-                    <p>Normal food</p>
-                    <div class="price-box">$15</div>
+                    <h4>Stray hoodies</h4>
+                    <p>Comfortable and stylish hoodies for everyday wear</p>
+                    <div class="price-box">$50</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/images (3).jpg" alt="Grilled Salmon" class="dish-image active">
-                    <img src="img/images (5).jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/images (6).jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/images (7).jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/images (10).jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/download.jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/download (1).jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/stray-game-t-shirts.jpg" alt="Denim Jacket" class="dish-image active">
+                    <img src="img/نرومل 1.jpg" alt="Denim Jacket" class="dish-image">
+                    <img src="img/نرومل تيشريت.jpg" alt="Denim Jacket" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Energy Drinks</h4>
-                    <p>We live in 2444 and you still drink water?</p>
-                    <div class="price-box">$20</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="dish">
-                <div class="image-container">
-                    <img src="img/normal food.jpg" alt="Caesar Salad" class="dish-image active">
-                    <img src="img/normal food 2.jpg" alt="Caesar Salad" class="dish-image">
-                    <img src="img/Cantaloupe-and-Cucumber-Salad-0723fea-healthy-salads-ec245e29b1554a19964996e10cae5cdd.jpg" alt="Caesar Salad" class="dish-image">
-                </div>
-                <div class="dish-info">
-                    <h4>Salads</h4>
-                    <p>Salads, haha what a joke; the last time I saw someone eat salad was in 2423</p>
-                    <div class="price-box">$12</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="menu">
-            <h3>Cyberpunk Dishes</h3>
-            <div class="dish">
-                <div class="image-container">
-                    <img src="img/hotdog cyber.jpg" alt="Neon hotdog" class="dish-image active">
-                </div>
-                <div class="dish-info">
-                    <h4>Neon Sushi</h4>
-                    <p>I know $25 is a lot, but trust me when I say it's gonna blow your mind.</p>
-                    <div class="price-box">$25</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="dish">
-                <div class="image-container">
-                    <img src="img/cyber drink.jpg" alt="Energy drink" class="dish-image active">
-                </div>
-                <div class="dish-info">
-                    <h4>Energy Drink</h4>
-                    <p>Wanna stay awake for 3 days? Give it a shot!</p>
-                    <div class="price-box">$30</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="dish">
-                <div class="image-container">
-                    <img src="img/meal cyber.jpg" alt="Cyber meal" class="dish-image active">
-                </div>
-                <div class="dish-info">
-                    <h4>Cyber Meal</h4>
-                    <p>You run out of ideas, you spend a lot of time asking your friend what should I pick? We got you; this is the perfect meal. Plus, if you eat it alone in 30 minutes, no need to pay!</p>
+                    <h4>NightCity T-shirts</h4>
+                    <p>Classic T-shirts for a timeless look</p>
                     <div class="price-box">$40</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <div class="image-container">
+                    <img src="img/51GjUcL8qXL._AC_SX679_.jpg" alt="Leather Jacket" class="dish-image active">
+                    <img src="img/51rothoVNAL._AC_SX679_.jpg" alt="Leather Jacket" class="dish-image">
+                    <img src="img/51ZHy40MEjL._AC_SX679_.jpg" alt="Leather Jacket" class="dish-image">
+                    <img src="img/51M96Px5fmL._AC_SX679_.jpg" alt="Leather Jacket" class="dish-image">
+                </div>
+                <div class="dish-info">
+                    <h4>Stary T-shirts</h4>
+                    <p>be the cat</p>
+                    <div class="price-box">$80</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h3>night city special</h3>
+            <div class="dish">
+                <div class="image-container">
+                    <img src="img/سايبر 3.jpg" alt="Formal Suit" class="dish-image active">
+                    <img src="img/سايبر 2.jpg" alt="Formal Suit" class="dish-image">
+                </div>
+                <div class="dish-info">
+                    <h4>Neon Hoodie</h4>
+                    <p>its a 3d hoodie </p>
+                    <div class="price-box">$99.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <div class="image-container">
+                    <img src="img/سايبر بانك تي شيرت.jpg" alt="Dress Shirt" class="dish-image active">
+                </div>
+                <div class="dish-info">
+                    <h4>Night Mode</h4>
+                    <p>be the moon by wearing this hoodie </p>
+                    <div class="price-box">$199.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <div class="image-container">
+                    <img src="img/baf770b9268b75a473d6d88030bed6ed.webp" alt="Evening Gown" class="dish-image active">
+                </div>
+                <div class="dish-info">
+                    <h4>wall panel</h4>
+                    <p>let there be light </p>
+                    <div class="price-box">$149.99</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
@@ -140,7 +231,7 @@
     </main>
 
     <footer>
-        <p>© 2024 NightCity Experience. All rights reserved.</p>
+        <p>© 2024 March Experience. All rights reserved to class C44.</p>
     </footer>
     <script src="script.js"></script>
     <script>
@@ -159,7 +250,13 @@
 
                     setTimeout(() => {
                         nextImage.classList.add('active');
-                    }, 500); // تأخير لتغيير الصورة
+
+                        dish.classList.add('purple');
+
+                        setTimeout(() => {
+                            dish.classList.remove('purple');
+                        }, 500); 
+                    }, 500); 
 
                     currentIndex = (currentIndex + 1) % images.length; 
                 });
