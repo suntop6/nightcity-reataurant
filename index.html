@@ -6,6 +6,60 @@
     <title>NightCity restaurant</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image: url('img/pexels-lexi-lauwers-1431940-2921137.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        color: #e0e0e0;
+        overflow-x: hidden;
+        min-height: 100vh; /* يضمن أن يغطي الجسم كامل الشاشة */
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        flex-shrink: 0;
+    }
+
+    main {
+        flex-grow: 1; /* يتيح للـ main التمدد لملء الفراغ */
+    }
+
+    footer {
+        flex-shrink: 0;
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #777;
+        font-size: 0.9em;
+        box-shadow: 0 -4px 2px -2px #000;
+    }
+
+    .image-container {
+        position: relative;
+        overflow: hidden; 
+        height: 200px; 
+    }
+
+    .dish-image {
+        width: 100%; 
+        min-height: 100%;
+        object-fit: cover; 
+        transition: opacity 0.5s ease; 
+        position: absolute; 
+        top: 0;
+        left: 0;
+        opacity: 0; 
+    }
+
+    .dish-image.active {
+        opacity: 1; 
+    }
+</style>
 <body>
     <header>
         <h1>NightCity Home</h1>
@@ -28,12 +82,8 @@
             <section class="video-section">
                 <video style="width: 450px;" controls>
                     <source src="4546" type="video/mp4">
-                    
                 </video>
-                
-                
             </section>
-            
         </section>
     </main>
 
