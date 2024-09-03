@@ -16,27 +16,7 @@
         background-repeat: no-repeat; 
         color: #e0e0e0;
         overflow-x: hidden;
-        min-height: 100vh; /* يضمن أن يغطي الجسم كامل الشاشة */
-        display: flex;
-        flex-direction: column;
-    }
-
-    header {
-        flex-shrink: 0;
-    }
-
-    main {
-        flex-grow: 1; /* يتيح للـ main التمدد لملء الفراغ */
-    }
-
-    footer {
-        flex-shrink: 0;
-        text-align: center;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.9);
-        color: #777;
-        font-size: 0.9em;
-        box-shadow: 0 -4px 2px -2px #000;
+        min-height: 100vh; 
     }
 
     .image-container {
@@ -58,6 +38,29 @@
 
     .dish-image.active {
         opacity: 1; 
+    }
+
+    main {
+        padding-bottom: 50px; 
+    }
+
+    .video-section {
+        display: flex;
+        justify-content: center;
+        gap: 20px; 
+        margin-top: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #777;
+        font-size: 0.9em;
+        box-shadow: 0 -4px 2px -2px #000;
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 </style>
 <body>
@@ -81,7 +84,10 @@
 
             <section class="video-section">
                 <video style="width: 450px;" controls>
-                    <source src="4546" type="video/mp4">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <video style="width: 450px;" controls>
+                    <source src="video2.mp4" type="video/mp4">
                 </video>
             </section>
         </section>
