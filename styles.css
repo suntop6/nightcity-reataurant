@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url('img/pexels-lexi-lauwers-1431940-2921137.jpg'); /* تأكد من أن المسار صحيح */
+    background-image: url('img/pexels-lexi-lauwers-1431940-2921137.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     color: #e0e0e0;
