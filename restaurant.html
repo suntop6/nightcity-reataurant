@@ -3,128 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Restaurant - NightCity</title>
+    <title>The Restaurant - NightCity</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* تحديثات الصور المتعددة لكل طبق */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/tjp8ioa1adm71.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
         .image-container {
             position: relative;
-            overflow: hidden; /* إخفاء الأجزاء الزائدة */
-            height: 200px; /* ارتفاع موحد للصور */
+            overflow: hidden; 
+            height: 200px; 
         }
-
         .dish-image {
-            width: 100%; /* عرض كامل */
+            width: 100%; 
             height: 100%;
-            object-fit: cover; /* ملاءمة الصورة */
-            transition: opacity 0.5s ease; /* تأثير الانتقال */
-            position: absolute; /* وضع الصورة بشكل مطلق */
+            object-fit: cover; 
+            transition: opacity 0.5s ease; 
+            position: absolute; 
             top: 0;
             left: 0;
-            opacity: 0; /* إخفاء الصورة في البداية */
+            opacity: 0; 
         }
-
         .dish-image.active {
-            opacity: 1; /* إظهار الصورة النشطة */
-        }
-
-        .dish {
-            position: relative; /* لإنشاء تأثير النيون */
-            overflow: hidden; /* إخفاء الأجزاء الزائدة */
-            background-color: rgba(26, 26, 26, 0.9);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .dish:hover {
-            transform: scale(1.05); /* تأثير تكبير */
-            box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* ظل متألق عند التمرير */
-        }
-
-        .dish:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 10px; /* زوايا دائرية للأشعة */
-            background: rgba(0, 255, 204, 0.5); /* لون الأشعة الطبيعية */
-            z-index: 0; /* خلف النص */
-            opacity: 0; /* إخفاء في البداية */
-            transition: opacity 0.5s ease; /* تأثير الانتقال للأشعة */
-        }
-
-        .dish.active:before {
-            opacity: 1; /* إظهار الأشعة */
-        }
-
-        .dish.active.purple:before {
-            background: rgba(128, 0, 128, 0.5); /* لون الأشعة البنفسجية */
-            transition: background 0.5s ease; /* تأثير الانتقال للون */
-        }
-
-        .dish-info {
-            position: relative;
-            z-index: 1; /* فوق الصور */
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8); /* خلفية داكنة */
-            border-radius: 10px;
-            transition: opacity 0.5s ease; /* تأثير الانتقال للنص */
-        }
-
-        .dish h4 {
-            font-size: 1.5em;
-            color: #00ffcc;
-            text-shadow: 0 0 10px #00ffcc;
-        }
-
-        .dish p {
-            color: #c0c0c0;
-        }
-
-        .price-box {
-            background-color: #ff007f;
-            color: #000;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-
-        .add-to-cart {
-            background-color: #00ffcc;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .add-to-cart:hover {
-            background-color: #ff007f;
-            color: #fff;
-        }
-
-        /* Menu Styles */
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.8);
+            opacity: 1; 
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>NightCity Experience</h1>
+        <h1>NightCity Restaurant</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -145,42 +59,42 @@
             <h3>Traditional Dishes</h3>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Spaghetti Carbonara" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Spaghetti Carbonara" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Spaghetti Carbonara" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Spaghetti Carbonara" class="dish-image">
+                    <img src="img/images.jpg" alt="Spaghetti Carbonara" class="dish-image active">
+                    <img src="img/images (1).jpg" alt="Spaghetti Carbonara" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Spaghetti Carbonara</h4>
-                    <p>Creamy pasta with a rich, smoky flavor.</p>
+                    <h4>Flash Foods</h4>
+                    <p>Normal food</p>
                     <div class="price-box">$15</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Grilled Salmon" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Grilled Salmon" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/images (3).jpg" alt="Grilled Salmon" class="dish-image active">
+                    <img src="img/images (5).jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/images (6).jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/images (7).jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/images (10).jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/download.jpg" alt="Grilled Salmon" class="dish-image">
+                    <img src="img/download (1).jpg" alt="Grilled Salmon" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Grilled Salmon</h4>
-                    <p>Perfectly grilled salmon with a citrus glaze.</p>
+                    <h4>Energy Drinks</h4>
+                    <p>We live in 2444 and you still drink water?</p>
                     <div class="price-box">$20</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Caesar Salad" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Caesar Salad" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Caesar Salad" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Caesar Salad" class="dish-image">
+                    <img src="img/normal food.jpg" alt="Caesar Salad" class="dish-image active">
+                    <img src="img/normal food 2.jpg" alt="Caesar Salad" class="dish-image">
+                    <img src="img/Cantaloupe-and-Cucumber-Salad-0723fea-healthy-salads-ec245e29b1554a19964996e10cae5cdd.jpg" alt="Caesar Salad" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Caesar Salad</h4>
-                    <p>Fresh romaine lettuce with a classic Caesar dressing.</p>
+                    <h4>Salads</h4>
+                    <p>Salads, haha what a joke; the last time I saw someone eat salad was in 2423</p>
                     <div class="price-box">$12</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
@@ -191,42 +105,33 @@
             <h3>Cyberpunk Dishes</h3>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Neon Sushi" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Neon Sushi" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Neon Sushi" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Neon Sushi" class="dish-image">
+                    <img src="img/hotdog cyber.jpg" alt="Neon hotdog" class="dish-image active">
                 </div>
                 <div class="dish-info">
                     <h4>Neon Sushi</h4>
-                    <p>Sushi that glows in the dark, with a taste out of this world.</p>
+                    <p>I know $25 is a lot, but trust me when I say it's gonna blow your mind.</p>
                     <div class="price-box">$25</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Quantum Burger" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Quantum Burger" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Quantum Burger" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Quantum Burger" class="dish-image">
+                    <img src="img/cyber drink.jpg" alt="Energy drink" class="dish-image active">
                 </div>
                 <div class="dish-info">
-                    <h4>Quantum Burger</h4>
-                    <p>A burger with layers of flavor, engineered for the future.</p>
+                    <h4>Energy Drink</h4>
+                    <p>Wanna stay awake for 3 days? Give it a shot!</p>
                     <div class="price-box">$30</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
             <div class="dish">
                 <div class="image-container">
-                    <img src="img/0d9be8b4749f5e6b1628e86bdb14127d.png" alt="Virtual Steak" class="dish-image active">
-                    <img src="img/a_6623b347ae078f5c015f17116a22886c.gif" alt="Virtual Steak" class="dish-image">
-                    <img src="img/AbdelFattah_Elsisi.jpg" alt="Virtual Steak" class="dish-image">
-                    <img src="img/WatermelonFeta-5c591fd.jpg" alt="Virtual Steak" class="dish-image">
+                    <img src="img/meal cyber.jpg" alt="Cyber meal" class="dish-image active">
                 </div>
                 <div class="dish-info">
-                    <h4>Virtual Steak</h4>
-                    <p>A steak that’s as real as it is virtual, with unparalleled taste.</p>
+                    <h4>Cyber Meal</h4>
+                    <p>You run out of ideas, you spend a lot of time asking your friend what should I pick? We got you; this is the perfect meal. Plus, if you eat it alone in 30 minutes, no need to pay!</p>
                     <div class="price-box">$40</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
@@ -235,11 +140,10 @@
     </main>
 
     <footer>
-        <p>© 2024 NightCity Experience. All rights reserved.</p>
+        <p>© 2024 NightCity Experience. All rights reserved to class C44.</p>
     </footer>
     <script src="script.js"></script>
     <script>
-        // كود JavaScript لتبديل الصور
         document.addEventListener("DOMContentLoaded", () => {
             const dishes = document.querySelectorAll('.dish');
 
@@ -247,29 +151,16 @@
                 const images = dish.querySelectorAll('.dish-image');
                 let currentIndex = 0;
 
-                // تغيير الصورة عند النقر
                 dish.addEventListener('click', () => {
                     const currentImage = images[currentIndex];
                     const nextImage = images[(currentIndex + 1) % images.length];
 
-                    // إخفاء الصورة الحالية
                     currentImage.classList.remove('active');
 
-                    // الانتظار حتى تنتهي عملية الإخفاء
                     setTimeout(() => {
-                        // إظهار الصورة التالية
                         nextImage.classList.add('active');
+                    }, 500); 
 
-                        // تفعيل تأثير الأشعة البنفسجية
-                        dish.classList.add('purple');
-
-                        // العودة إلى الحالة الطبيعية بعد فترة
-                        setTimeout(() => {
-                            dish.classList.remove('purple');
-                        }, 500); // مدة الأشعة البنفسجية
-                    }, 500); // يجب أن تتطابق مع مدة تأثير الإخفاء
-
-                    // تحديث الفهرس
                     currentIndex = (currentIndex + 1) % images.length; 
                 });
             });
