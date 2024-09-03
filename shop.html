@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Clothing - March</title>
+    <title>Nightcity March - March</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* تحديثات الصور المتعددة لكل قطعة ملابس */
+        body {
+            background-image: url('img/MainIMG-1920x1080-ef6bd1ad93ce95ba967e2347be8e74e1.avif'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #e0e0e0; 
+        }
+
         .image-container {
             position: relative;
-            overflow: hidden; /* إخفاء الأجزاء الزائدة */
-            height: 200px; /* ارتفاع موحد للصور */
+            overflow: hidden; 
+            height: 200px; 
         }
 
         .dish-image {
-            width: 100%; /* عرض كامل */
+            width: 100%; 
             height: 100%;
-            object-fit: cover; /* ملاءمة الصورة */
-            transition: opacity 0.5s ease; /* تأثير الانتقال */
-            position: absolute; /* وضع الصورة بشكل مطلق */
+            object-fit: cover; 
+            transition: opacity 0.5s ease; 
+            position: absolute; 
             top: 0;
             left: 0;
-            opacity: 0; /* إخفاء الصورة في البداية */
+            opacity: 0; 
         }
 
         .dish-image.active {
-            opacity: 1; /* إظهار الصورة النشطة */
+            opacity: 1; 
         }
 
         .dish {
-            position: relative; /* لإنشاء تأثير النيون */
-            overflow: hidden; /* إخفاء الأجزاء الزائدة */
+            position: relative; 
+            overflow: hidden; 
             background-color: rgba(26, 26, 26, 0.9);
             border-radius: 20px;
             padding: 20px;
@@ -40,8 +46,8 @@
         }
 
         .dish:hover {
-            transform: scale(1.05); /* تأثير تكبير */
-            box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* ظل متألق عند التمرير */
+            transform: scale(1.05); 
+            box-shadow: 0 0 30px rgba(0, 255, 255, 1); 
         }
 
         .dish:before {
@@ -51,30 +57,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border-radius: 10px; /* زوايا دائرية للأشعة */
-            background: rgba(0, 255, 204, 0.5); /* لون الأشعة الطبيعية */
-            z-index: 0; /* خلف النص */
-            opacity: 0; /* إخفاء في البداية */
-            transition: opacity 0.5s ease; /* تأثير الانتقال للأشعة */
+            border-radius: 10px; 
+            background: rgba(0, 255, 204, 0.5); 
+            z-index: 0; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
         }
 
         .dish.active:before {
-            opacity: 1; /* إظهار الأشعة */
+            opacity: 1; 
         }
 
         .dish.active.purple:before {
-            background: rgba(128, 0, 128, 0.5); /* لون الأشعة البنفسجية */
-            transition: background 0.5s ease; /* تأثير الانتقال للون */
+            background: rgba(128, 0, 128, 0.5); 
+            transition: background 0.5s ease; 
         }
 
         .dish-info {
             position: relative;
-            z-index: 1; /* فوق الصور */
+            z-index: 1; 
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8); /* خلفية داكنة */
+            background: rgba(0, 0, 0, 0.8); 
             border-radius: 10px;
-            transition: opacity 0.5s ease; /* تأثير الانتقال للنص */
+            transition: opacity 0.5s ease; 
         }
 
         .dish h4 {
@@ -112,7 +118,6 @@
             color: #fff;
         }
 
-        /* Menu Styles */
         .menu {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -124,12 +129,12 @@
 </head>
 <body>
     <header>
-        <h1>March Experience</h1>
+        <h1>Nightcity March</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Our Shop</a></li>
-                <li><a href="#">Book a Restaurant</a></li>
+                <li><a href="restaurant.html">Book a Restaurant</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
@@ -142,7 +147,7 @@
         </section>
 
         <section class="menu">
-            <h3>Casual Wear</h3>
+            <h3>Stray March </h3>
             <div class="dish">
                 <div class="image-container">
                     <img src="img/stray-game-t-shirts (1).jpg" alt="Casual T-Shirt" class="dish-image active">
@@ -151,9 +156,9 @@
                     <img src="img/stray-game-t-shirts (3).jpg" alt="Casual T-Shirt" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Casual T-Shirt</h4>
-                    <p>Comfortable and stylish casual t-shirt for everyday wear.</p>
-                    <div class="price-box">$15</div>
+                    <h4>Stray hoodies</h4>
+                    <p>Comfortable and stylish hoodies for everyday wear</p>
+                    <div class="price-box">$50</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
@@ -164,8 +169,8 @@
                     <img src="img/نرومل تيشريت.jpg" alt="Denim Jacket" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Denim Jacket</h4>
-                    <p>Classic denim jacket for a timeless look.</p>
+                    <h4>NightCity T-shirts</h4>
+                    <p>Classic T-shirts for a timeless look</p>
                     <div class="price-box">$40</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
@@ -178,8 +183,8 @@
                     <img src="img/51M96Px5fmL._AC_SX679_.jpg" alt="Leather Jacket" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Leather Jacket</h4>
-                    <p>Stylish leather jacket for a bold statement.</p>
+                    <h4>Stary T-shirts</h4>
+                    <p>be the cat</p>
                     <div class="price-box">$80</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
@@ -187,16 +192,16 @@
         </section>
 
         <section class="menu">
-            <h3>Formal Wear</h3>
+            <h3>night city special</h3>
             <div class="dish">
                 <div class="image-container">
                     <img src="/img/سايبر 3.jpg" alt="Formal Suit" class="dish-image active">
                     <img src="/img/سايبر 2.jpg" alt="Formal Suit" class="dish-image">
                 </div>
                 <div class="dish-info">
-                    <h4>Formal Suit</h4>
-                    <p>Elegant formal suit for special occasions.</p>
-                    <div class="price-box">$200</div>
+                    <h4>Neon Hoodie</h4>
+                    <p>its a 3d hoodie </p>
+                    <div class="price-box">$99.99</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
@@ -205,9 +210,9 @@
                     <img src="img/سايبر بانك تي شيرت.jpg" alt="Dress Shirt" class="dish-image active">
                 </div>
                 <div class="dish-info">
-                    <h4>Dress Shirt</h4>
-                    <p>Sophisticated dress shirt for a polished look.</p>
-                    <div class="price-box">$50</div>
+                    <h4>Night Mode</h4>
+                    <p>be the moon by wearing this hoodie </p>
+                    <div class="price-box">$199.99</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
@@ -216,9 +221,9 @@
                     <img src="img/baf770b9268b75a473d6d88030bed6ed.webp" alt="Evening Gown" class="dish-image active">
                 </div>
                 <div class="dish-info">
-                    <h4>Evening Gown</h4>
-                    <p>Beautiful evening gown for elegant events.</p>
-                    <div class="price-box">$150</div>
+                    <h4>wall panel</h4>
+                    <p>let there be light </p>
+                    <div class="price-box">$149.99</div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
@@ -226,11 +231,10 @@
     </main>
 
     <footer>
-        <p>© 2024 March Experience. All rights reserved.</p>
+        <p>© 2024 March Experience. All rights reserved to class C44.</p>
     </footer>
     <script src="script.js"></script>
     <script>
-        // كود JavaScript لتبديل الصور
         document.addEventListener("DOMContentLoaded", () => {
             const dishes = document.querySelectorAll('.dish');
 
@@ -238,29 +242,22 @@
                 const images = dish.querySelectorAll('.dish-image');
                 let currentIndex = 0;
 
-                // تغيير الصورة عند النقر
                 dish.addEventListener('click', () => {
                     const currentImage = images[currentIndex];
                     const nextImage = images[(currentIndex + 1) % images.length];
 
-                    // إخفاء الصورة الحالية
                     currentImage.classList.remove('active');
 
-                    // الانتظار حتى تنتهي عملية الإخفاء
                     setTimeout(() => {
-                        // إظهار الصورة التالية
                         nextImage.classList.add('active');
 
-                        // تفعيل تأثير الأشعة البنفسجية
                         dish.classList.add('purple');
 
-                        // العودة إلى الحالة الطبيعية بعد فترة
                         setTimeout(() => {
                             dish.classList.remove('purple');
-                        }, 500); // مدة الأشعة البنفسجية
-                    }, 500); // يجب أن تتطابق مع مدة تأثير الإخفاء
+                        }, 500); 
+                    }, 500); 
 
-                    // تحديث الفهرس
                     currentIndex = (currentIndex + 1) % images.length; 
                 });
             });
