@@ -16,18 +16,111 @@ body {
     .container {
         flex-direction: column;
     }
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0; 
+    }
+    nav ul li a {
+        font-size: 1em; 
+        padding: 10px; 
+    }
+    .intro {
+        padding: 50px 10px;
+    }
+    .intro h2 {
+        font-size: 2em;
+    }
+    .intro p {
+        font-size: 1.2em;
+    }
+    .menu {
+        padding: 30px 10px;
+    }
+    .dish {
+        padding: 15px;
+    }
+    .price-box {
+        font-size: 1.2em;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     body {
         font-size: 16px;
     }
+    header h1 {
+        font-size: 2.2em;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 30px;
+    }
+    nav ul li a {
+        font-size: 1.1em;
+    }
+    .intro {
+        padding: 80px 20px;
+    }
+    .intro h2 {
+        font-size: 2.5em;
+    }
+    .intro p {
+        font-size: 1.4em;
+    }
+    .menu {
+        padding: 40px 20px;
+    }
+    .dish {
+        padding: 20px;
+    }
+    .price-box {
+        font-size: 1.4em;
+    }
 }
-
 
 @media only screen and (min-width: 769px) {
     body {
         font-size: 18px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    nav ul li {
+        margin: 0 60px;
+    }
+    nav ul li a {
+        font-size: 1.2em;
+    }
+    .intro {
+        padding: 100px 20px;
+    }
+    .intro h2 {
+        font-size: 3em;
+    }
+    .intro p {
+        font-size: 1.5em;
+    }
+    .menu {
+        padding: 50px 20px;
+    }
+    .dish {
+        padding: 20px;
+    }
+    .price-box {
+        font-size: 1.5em;
     }
 }
 
@@ -72,10 +165,9 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
     position: relative;
-    animation: neonPulse 1.5s infinite alternate;
+    animation: neonPulse 1.5s infinite alternate; 
     text-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px blue; 
     margin-left: 5px; 
-}
 
 nav ul li a:hover {
     color: #00ffcc; 
